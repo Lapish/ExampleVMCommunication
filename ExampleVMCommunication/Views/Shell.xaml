@@ -17,6 +17,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
+        <!--  Регистрируем регионы  -->
         <ContentControl Grid.Column="0" prism:RegionManager.RegionName="{x:Static contracts:Regions.LeftRegion}" />
         <ContentControl Grid.Column="1" prism:RegionManager.RegionName="{x:Static contracts:Regions.RightRegion}" />
     </Grid>
