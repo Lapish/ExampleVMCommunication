@@ -1,10 +1,10 @@
-﻿using System.Windows;
+﻿using System.Windows.Controls;
 
 namespace ExampleVMCommunication.Views
 {
-    public partial class Shell : Window
+    public partial class LeftView : UserControl
     {
-        public Shell()
+        public LeftView()
         {
             InitializeComponent();
         }

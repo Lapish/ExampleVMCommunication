@@ -2,11 +2,23 @@
     x:Class="ExampleVMCommunication.Views.Shell"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:contracts="clr-namespace:ExampleVMCommunication.Contracts"
+    xmlns:prism="http://prismlibrary.com/"
+    Title="Shell"
     MinWidth="450"
     MinHeight="350"
-    WindowStartupLocation="CenterScreen"
+    prism:ViewModelLocator.AutoWireViewModel="True"
     SizeToContent="WidthAndHeight"
-    Title="Shell">
+    WindowStartupLocation="CenterScreen">
 
-    <Grid />
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <ContentControl Grid.Column="0" prism:RegionManager.RegionName="{x:Static contracts:Regions.LeftRegion}" />
+        <ContentControl Grid.Column="1" prism:RegionManager.RegionName="{x:Static contracts:Regions.RightRegion}" />
+    </Grid>
+
 </Window>
